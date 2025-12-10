@@ -76,7 +76,7 @@ int main(int argc, char* argv[]) {
       }
     }
 
-    // Build UI tree from Lua
+    // nigga, Build UI tree from Lua 
     lua_getglobal(L, "UI");
     if (!lua_istable(L, -1)) {
       lua_pop(L, 1);
@@ -89,17 +89,17 @@ int main(int argc, char* argv[]) {
     Node* root = buildNode(L, -1);
     lua_pop(L, 1);
 
-    // Layout
+    // Layout hehe
     measure(root);
     layout(root, 0, 0);
 
-    // Render
+    // Render (render my love for tanush)
     SDL_SetRenderDrawColor(renderer ,30,30,30,255);
     SDL_RenderClear(renderer);
     renderNode(renderer, root);
     SDL_RenderPresent(renderer);
 
-    // Cleanup
+    // Cleanup 
     freeTree(root);
   }
 

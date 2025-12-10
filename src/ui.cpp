@@ -7,7 +7,7 @@ Node* buildNode(lua_State* L, int idx) {
 
     Node* n = new Node();
 
-    // type
+    // type (moti ladkiya)
     lua_getfield(L, idx, "type");
     if (lua_isstring(L, -1))
         n->type = lua_tostring(L, -1);
